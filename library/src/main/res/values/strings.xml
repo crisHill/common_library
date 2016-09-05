@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Library</string>
+
+    <string-array name="nav_content">
+        <item name="song">song</item>
+        <item name="album">album</item>
+        <item name="artiest">artiest</item>
+    </string-array>
+
+
+    <color name="nar_bar_item_bg">#FAF0E6</color>
+    <color name="nar_bar_text_color">#FFFFFF</color>
+    <color name="nar_bar_bar_bg">#EE82EE</color>
+</resources>

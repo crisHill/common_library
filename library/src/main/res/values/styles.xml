@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="NavBar">
+        <attr name="navBar_itemCount" format="integer" />
+        <attr name="navBar_itemBackground" format="color|reference" />
+        <attr name="navBar_itemTextColor" format="color|reference" />
+        <attr name="navBar_itemTextSize" format="integer|reference" />
+        <attr name="navBar_barHeight" format="dimension|reference" />
+        <attr name="navBar_barBackground" format="color|reference" />
+    </declare-styleable>
+
+</resources>
