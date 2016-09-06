@@ -41,6 +41,24 @@ public class NavBar extends RelativeLayout {
     private View bar;
     private TextView[] tvs;
     private float ration;
+    private OnNavBarItemClickListener listener;
+    private OnClickListener clickListener = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            int postion = (int) v.getTag();
+
+            if(listener != null){
+                listener.onItemClick(postion);
+            }
+
+            select(postion);
+        }
+    };
+
+    private void select(int postion) {
+        setCurrentIndex(postion);
+        onScroll(0);
+    }
 
     public NavBar(Context context) {
         this(context, null);
@@ -87,6 +105,9 @@ public class NavBar extends RelativeLayout {
             tv.setTextColor(itemTextColor);
             tvs[i] = tv;
             tvHolder.addView(tv);
+
+            tv.setTag(i);
+            tv.setOnClickListener(clickListener);
         }
         this.addView(tvHolder);
 
@@ -191,6 +212,14 @@ public class NavBar extends RelativeLayout {
     public void onScroll(int currentIndex, float ratio){
         setCurrentIndex(currentIndex);
         onScroll(ratio);
+    }
+
+    public void setOnNavBarItemClickListener(OnNavBarItemClickListener listener){
+        this.listener = listener;
+    }
+
+    public interface OnNavBarItemClickListener{
+        void onItemClick(int position);
     }
 
 }

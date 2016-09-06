@@ -67,8 +67,8 @@ public class NavBarDemo extends AppCompatActivity {
             list.add(fragment);
         }
 
-        ViewPager viewPager = (ViewPager) findViewById(R.id.container);
-        FragmentPagerAdapter adapter = new FragmentPagerAdapter(this.getSupportFragmentManager()) {
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.container);
+        final FragmentPagerAdapter adapter = new FragmentPagerAdapter(this.getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
                 return list.get(position);
@@ -99,6 +99,14 @@ public class NavBarDemo extends AppCompatActivity {
             @Override
             public void onPageScrollStateChanged(int state) {
 
+            }
+        });
+
+
+        navBar.setOnNavBarItemClickListener(new NavBar.OnNavBarItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                viewPager.setCurrentItem(position, false);
             }
         });
     }

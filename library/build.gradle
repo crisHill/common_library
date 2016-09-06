@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
-version = "0.0.3"
+version = "0.0.5"
 def siteUrl = 'https://github.com/crisHill/common_library'    // 项目主页
 def gitUrl = 'https://github.com/crisHill/common_library.git' // Git仓库的url
 group = "zls.android"
