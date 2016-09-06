@@ -5,7 +5,7 @@
         <attr name="navBar_itemCount" format="integer" />
         <attr name="navBar_itemBackground" format="color|reference" />
         <attr name="navBar_itemTextColor" format="color|reference" />
-        <attr name="navBar_itemTextSize" format="integer|reference" />
+        <attr name="navBar_itemTextSize" format="dimension|reference" />
         <attr name="navBar_barHeight" format="dimension|reference" />
         <attr name="navBar_barBackground" format="color|reference" />
     </declare-styleable>
